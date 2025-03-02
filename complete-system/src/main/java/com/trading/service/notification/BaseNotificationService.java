@@ -1,4 +1,10 @@
 package com.trading.service.notification;
+import com.trading.model.Order;
+import com.trading.repository.OrderRepository;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Service;
+import java.math.BigDecimal;
+import java.util.concurrent.CompletableFuture;
 
 public interface NotificationService {
     void notify(String message);
